@@ -3,21 +3,44 @@
 * {
 	// border: 1px solid red;
 	margin: 0;
-	padding: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 div {
 	font-family: 'VT323', monospace;
 	font-size: 70px;
-	// transition: 0.3s;
 	width: 100vw;
 	height: 100vh;
 	text-align: center;
-	overflow-x: hidden;
+  &:nth-of-type(3) {
+    color: #A3E22F;
+  }
+}
+
+.name {
+  padding-bottom: 10%;
+}
+
+.rotated {
+  transform: rotate(90deg) !important;
+  font-size: 30px;
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    font-size: 30px;
+  }
+  50% {
+    font-size: 40px;
+  }
+  100% {
+    font-size: 30px;
+  }
 }
 
 p {
 	position: relative;
   top: 42%;
-	// transform: perspective(1px) translateY(-45%); 
 }
