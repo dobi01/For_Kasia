@@ -12,15 +12,35 @@ div {
   text-align: center; }
   div:nth-of-type(3) {
     color: #A3E22F; }
+  @media (max-width: 400px) {
+    div {
+      font-size: 60px; } }
 
 .name {
   padding-bottom: 10%; }
+  @media (max-width: 400px) {
+    .name {
+      padding-bottom: 30%; } }
 
 .rotated {
+  -webkit-transform: rotate(90deg) !important;
+  -ms-transform: rotate(90deg) !important;
   transform: rotate(90deg) !important;
   font-size: 30px;
+  -webkit-animation: pulse 4s infinite;
   animation: pulse 4s infinite; }
 
+.love {
+  -webkit-animation: heart-beat 2s linear infinite;
+  animation: heart-beat 2s linear infinite; }
+
+@-webkit-keyframes pulse {
+  0% {
+    font-size: 30px; }
+  50% {
+    font-size: 40px; }
+  100% {
+    font-size: 30px; } }
 @keyframes pulse {
   0% {
     font-size: 30px; }
@@ -28,8 +48,58 @@ div {
     font-size: 40px; }
   100% {
     font-size: 30px; } }
+@-webkit-keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    color: black; }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    color: #780000; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    color: red; } }
+@keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    color: black; }
+  50% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    color: #780000; }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    color: red; } }
 p {
   position: relative;
   top: 42%; }
+
+img {
+  position: relative;
+  top: 35%;
+  -webkit-animation: rotator 15s linear infinite;
+  animation: rotator 15s linear infinite; }
+
+@-webkit-keyframes rotator {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes rotator {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+.joga {
+  -webkit-animation: rotator 3s infinite;
+  animation: rotator 3s infinite; }
 
 /*# sourceMappingURL=style.css.map */

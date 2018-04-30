@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=VT323&subset=latin-ext');
 
 * {
-	// border: 1px solid red;
 	margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -16,31 +15,123 @@ div {
   &:nth-of-type(3) {
     color: #A3E22F;
   }
+  @media (max-width: 400px) {
+    font-size: 60px;
+  }
 }
 
 .name {
   padding-bottom: 10%;
+  @media (max-width: 400px) {
+    padding-bottom: 30%;
+  }
 }
 
 .rotated {
-  transform: rotate(90deg) !important;
+  -webkit-transform: rotate(90deg) !important;
+      -ms-transform: rotate(90deg) !important;
+          transform: rotate(90deg) !important;
   font-size: 30px;
-  animation: pulse 4s infinite;
+  -webkit-animation: pulse 4s infinite;
+          animation: pulse 4s infinite;
 }
+
+.love {
+  -webkit-animation: heart-beat 2s linear infinite;
+          animation: heart-beat 2s linear infinite;
+}
+
+
+@-webkit-keyframes pulse {
+  0% {
+    font-size: 30px; }
+  50% {
+    font-size: 40px; }
+  100% {
+    font-size: 30px; } 
+}
+
 
 @keyframes pulse {
   0% {
-    font-size: 30px;
+    font-size: 30px; }
+  50% {
+    font-size: 40px; }
+  100% {
+    font-size: 30px; } 
+}
+
+@-webkit-keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: rgba(0,0,0,1);
   }
   50% {
-    font-size: 40px;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    color: rgba(120,0,0,1);
   }
   100% {
-    font-size: 30px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: rgba(255,0,0,1);
+  }
+}
+
+@keyframes heart-beat {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: rgba(0,0,0,1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    color: rgba(120,0,0,1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    color: rgba(255,0,0,1);
   }
 }
 
 p {
 	position: relative;
   top: 42%;
+}
+
+img {
+	position: relative;
+  top: 35%;
+  -webkit-animation: rotator 15s linear infinite;
+          animation: rotator 15s linear infinite;
+}
+
+@-webkit-keyframes rotator {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotator {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.joga {
+  -webkit-animation: rotator 3s infinite;
+          animation: rotator 3s infinite;
 }
