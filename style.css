@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=VT323&subset=latin-ext");
+* {
+  margin: 0;
+  padding: 0; }
+
+div {
+  font-family: 'VT323', monospace;
+  font-size: 70px;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  overflow-x: hidden; }
+
+p {
+  position: relative;
+  top: 42%; }
+
+/*# sourceMappingURL=style.css.map */
