@@ -11,16 +11,31 @@ div {
 	font-size: 70px;
 	width: 100vw;
 	height: 100vh;
-	text-align: center;
+  text-align: center;
+  position: relative;
   &:nth-of-type(3) {
     color: #A3E22F;
   }
   @media (max-width: 400px) {
     font-size: 60px;
   }
+  p {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.container {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 
 .name {
+  position: relative;
   padding-bottom: 10%;
   @media (max-width: 400px) {
     padding-bottom: 30%;
@@ -28,19 +43,16 @@ div {
 }
 
 .rotated {
-  -webkit-transform: rotate(90deg) !important;
-      -ms-transform: rotate(90deg) !important;
-          transform: rotate(90deg) !important;
+  transform-origin: top left;
+  position: relative;
+  width: 200px;
+  -webkit-transform: rotate(90deg) translate(-50%, -50%);
+      -ms-transform: rotate(90deg) translate(-50%, -50%);
+          transform: rotate(90deg) translate(-50%, -50%);
   font-size: 30px;
   -webkit-animation: pulse 4s infinite;
           animation: pulse 4s infinite;
 }
-
-.love {
-  -webkit-animation: heart-beat 2s linear infinite;
-          animation: heart-beat 2s linear infinite;
-}
-
 
 @-webkit-keyframes pulse {
   0% {
@@ -63,75 +75,71 @@ div {
 
 @-webkit-keyframes heart-beat {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
     color: rgba(0,0,0,1);
   }
   50% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.2) translate(-50%, -50%);
+            transform: scale(1.2) translate(-50%, -50%);
     color: rgba(120,0,0,1);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
     color: rgba(255,0,0,1);
   }
 }
 
 @keyframes heart-beat {
   0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
     color: rgba(0,0,0,1);
   }
   50% {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: scale(1.2) translate(-50%, -50%);
+            transform: scale(1.2) translate(-50%, -50%);
     color: rgba(120,0,0,1);
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: scale(1) translate(-50%, -50%);
+            transform: scale(1) translate(-50%, -50%);
     color: rgba(255,0,0,1);
   }
 }
 
-p {
-	position: relative;
-  top: 42%;
-}
-
-img {
-	position: relative;
-  top: 35%;
-  -webkit-animation: rotator 15s linear infinite;
-          animation: rotator 15s linear infinite;
-}
-
 @-webkit-keyframes rotator {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(360deg) translate(-50%, -50%);
+            transform: rotate(360deg) translate(-50%, -50%);
   }
 }
 
 @keyframes rotator {
   from {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    -webkit-transform: rotate(0deg) translate(-50%, -50%);
+            transform: rotate(0deg) translate(-50%, -50%);
   }
   to {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    -webkit-transform: rotate(360deg) translate(-50%, -50%);
+            transform: rotate(360deg) translate(-50%, -50%);
   }
 }
 
 .joga {
+  transform-origin: top left;
+  width: 250px;
   -webkit-animation: rotator 3s infinite;
           animation: rotator 3s infinite;
+}
+
+.love {
+  transform-origin: top left;
+  -webkit-animation: heart-beat 2s linear infinite;
+          animation: heart-beat 2s linear infinite;
 }
